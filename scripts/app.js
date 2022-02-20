@@ -18,7 +18,7 @@ for (const button of filterButtons) {
 
 // Event handler for search box
 document.getElementById('search-filter-input').addEventListener('keyup', function (event) {
-  const key = event.target.value;
+  const key = event.target.value.trim();
   const products = document.querySelectorAll('.product');
 
   for (const product of products) {
