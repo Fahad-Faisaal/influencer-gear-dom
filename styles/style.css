@@ -198,10 +198,18 @@ header {
 }
 
 /* Products Gallery Section */
-#search-filter-button {
-  border: none;
+#search-filter-input {
+  height: 30px;
+  width: 230px;
+  padding: 4px;
+  font-size: 14px;
+  border: 1px solid #909598;
+  border-radius: 6px;
+  color: #0A0826;
+}
+
+#search-filter-input:focus {
   outline: none;
-  background-color: #fff;
 }
 
 .product-gallery {

@@ -1,3 +1,4 @@
+// Event handler for filter buttons
 const filterButtons = document.getElementsByClassName('btn-filter');
  
 for (const button of filterButtons) {
@@ -15,4 +16,22 @@ for (const button of filterButtons) {
   });
 };
 
-document.getElementById('search-filter-button').addEventListener('click', function () {})
+// Event handler for search box
+document.getElementById('search-filter-input').addEventListener('keyup', function (event) {
+  const key = event.target.value;
+  const products = document.querySelectorAll('.product');
+
+  for (const product of products) {
+    const item = product.dataset.item.toLowerCase();
+    console.log(item);
+    if (!item.includes(key)) {
+      product.style.display = 'none';
+    } else {
+      product.style.display = 'block';
+    }
+ };
+});
+
+
+
+
